@@ -1,0 +1,70 @@
+RewriteEngine On
+RewriteBase /
+
+#zadanie 1
+# Redirect /index.php /test.php
+
+#zadanie 3
+# Redirect /index.php /http://site.com.
+
+#zadanie 5
+#RewriteRule dir1/ index1.php
+#RewriteRule dir2/ index2.php
+
+#zadanie 7
+# RewriteRule (.+)\.php /index.php
+
+#zadanie 9
+# RewriteRule (.+)\.html /$1.php
+
+#zadanie 11
+# RedirectMatch /index([1-3])\.php /$1.php
+
+#zadanie 13
+# RedirectMatch /(.+)?(dir)(.+)?/ /index.php
+
+#zadanie15
+#RedirectMatch /test([0-9]).php /index.php
+
+#zadanie 17
+# RedirectMatch /([0-9]+)/ /index.php
+
+#zadanie 19
+# RewriteRule !(.+)\.html  index.php
+
+#zadanie 21
+# RewriteCond %{REQUEST_URI} \.html$
+# RewriteRule .+  index.php
+
+#zadanie 23
+# RewriteCond %{REQUEST_URI} \.html$
+# RewriteCond %{REQUEST_URI} ^/content/
+# RewriteRule .+  index.php
+
+#zadanie 25
+# RewriteCond %{REQUEST_URI} \.css$ [OR]
+# RewriteCond %{REQUEST_URI} ^/styles/
+# RewriteRule .+  index.php
+
+#zadanie 27
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule .+  index.php
+
+#zadanie 29
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule .+  index.php
+
+#zadanie 31
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule .+  index.php
+
+#zadanie 33
+# RewriteCond %{REQUEST_URI} !^/index\.php$
+# RewriteRule (.+)  index.php?get=$1
+
+#zadanie 35
+# RewriteRule test.php  index.php?get=1 [NC]
+
+#zadanie 37
+deny from all
